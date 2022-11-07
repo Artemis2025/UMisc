@@ -10,12 +10,19 @@ extension UILabel {
     /**
      Use textStyle for label
      */
-    public func ufont(_ textStyle: UIFont.TextStyle, auto: Bool = true){
+    public func uFont(_ textStyle: UIFont.TextStyle, auto: Bool = true){
         self.font = UIFont.preferredFont(forTextStyle: textStyle)
         if auto {
             self.adjustsFontForContentSizeCategory = true
         }
     }
     
+    /**
+     Use textStyle for label
+     */
+    public func uFont(_ textStyle: UIFont.TextStyle){
+        uFont(textStyle, auto: true)
+    }
+
 }
 
